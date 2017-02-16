@@ -1,6 +1,6 @@
 {
-  "name": "nodebb-plugin-google-analytics",
-  "version": "0.0.1",
+  "name": "nodebb-plugin-google-analytics-ccmt",
+  "version": "1.0.0",
   "description": "支持两个GA追踪ID同时对一个论坛进行统计。",
   "main": "library.js",
   "repository": {
@@ -10,8 +10,8 @@
   "keywords": [
     "nodebb",
     "plugin",
-    "quickstart",
-    "shell"
+    "google",
+    "analyticss"
   ],
   "author": {},
   "license": "MIT",

@@ -1,5 +1,5 @@
 {
-	"id": "nodebb-plugin-google-analytics",
+	"id": "nodebb-plugin-google-analytics-ccmt",
 	"url": "https://github.com/ccmtlittlestone/nodebb-plugin-google-analytics.git",
 	"library": "./library.js",
 	"hooks": [
