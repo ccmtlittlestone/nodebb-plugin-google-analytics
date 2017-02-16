@@ -8,13 +8,18 @@ plugin.init = function(params, callback) {
 		hostMiddleware = params.middleware,
 		hostControllers = params.controllers;
 
-	// We create two routes for every view. One API call, and the actual route itself.
-	// Just add the buildHeader middleware to your route and NodeBB will take care of everything for you.
-
 	router.get('/admin/plugins/google-analytics', hostMiddleware.admin.buildHeader, controllers.renderAdminPage);
 	router.get('/api/admin/plugins/google-analytics', controllers.renderAdminPage);
-	//router.get('/api/plugins/quickstart/categories', controllers.categoriesPage);
-	//router.get('/api/plugins/quickstart/', controllers.renderPage);
+	router.get("/api/plugins/google-analytics",function(req,res){
+			if (controllers.settings) {
+					//controllers.settings is empty
+					res.status(200).json(controllers.settings);
+			} else {
+					res.send(501);
+			}
+	});
+
+	controllers.loadSettings();
 
 	callback();
 };

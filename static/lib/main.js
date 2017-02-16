@@ -9,6 +9,7 @@ $(document).ready(function() {
 
         $.each(config,function(index,value) {
 					//测试
+					console.log(config);
             alert(index);
             ga("create",config.index,index);
             ga("send","pageview",index);
@@ -22,7 +23,7 @@ $(document).ready(function() {
 
     }).fail(function() {
         if (window.console) {
-            console.warn("[plugin/google-analytics-ccmt]Please check your Google Analytics Track ID in the plugin.It might be wrong.");
+            console.warn("[plugin/google-analytics]Please check your Google Analytics Track ID in the plugin.It might be wrong.");
         };
 
     });
