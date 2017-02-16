@@ -1,16 +1,22 @@
-# Google Analytics Plugin
+master
+asd
+# Quickstart Plugin for NodeBB
 
-This plugin allows you to track visitors to your NodeBB, including getting detailed view rates per topic/category.
+A starter kit for quickly creating NodeBB plugins. Comes with a pre-setup LESS file, server side JS script with an `action:app.load` hook, and a client-side script. Most plugins need at least one of the above, so this ought to save you some time. For a full list of hooks have a look at our [wiki page](https://github.com/NodeBB/NodeBB/wiki/Hooks), and for more information about creating plugins please visit our [documentation portal](https://docs.nodebb.org/).
 
-## Requirements
+Fork this or copy it, and using your favourite text editor find and replace all instances of `nodebb-plugin-quickstart` with `nodebb-plugin-your-plugins-name`. Change the author's name in the LICENSE and package.json files.
 
-This plugin requires NodeBB v0.1.1 or greater, due to hooks added during that revision.
+Once you're done don't forget to publish it on NPM, and make a thread about it [here](https://docs.nodebb.org/en/latest/plugins/hooks.html).
+
+
+## Hello World
+
+Really simple, just edit `static/lib/main.js` and paste in `console.log('hello world');`, and that's it!
 
 ## Installation
 
-1. Create a Google Analytics account ([here](https://www.google.com/analytics/web), and create a new app in order to receive a `UA-` number. This is your tracking ID.
-1. Install the plugin: `npm install nodebb-plugin-google-analytics`
+    npm install nodebb-plugin-quickstart
 
-1. Activate the plugin in the administration panel, and restart your NodeBB forum.
-1. Navigate to the Google Analytics settings page `/admin/plugins/google-analytics`, and save your tracking ID and domain, as specified in step 1.
-1. Go to the Google Analytics dashboard's "Real-Time" page and verify that your movement across pages is shown.
+## Screenshots
+
+Don't forget to add screenshots!
