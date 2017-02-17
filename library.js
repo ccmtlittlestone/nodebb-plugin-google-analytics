@@ -10,20 +10,10 @@ plugin.init = function(params, callback) {
 
 	router.get('/admin/plugins/google-analytics', hostMiddleware.admin.buildHeader, controllers.renderAdminPage);
 	router.get('/api/admin/plugins/google-analytics', controllers.renderAdminPage);
-	router.get("/api/plugins/google-analytics",function(req,res){
-			if (controllers.settings) {
-					//controllers.settings is empty
-					res.status(200).json(controllers.settings);
-			} else {
-					res.send(501);
-			}
-	});
-
-	controllers.loadSettings();
+	router.get("/api/plugins/google-analytics",controllers.loadSettings);
 
 	callback();
 };
-
 plugin.addAdminNavigation = function(header, callback) {
 	header.plugins.push({
 		route: '/plugins/google-analytics',
